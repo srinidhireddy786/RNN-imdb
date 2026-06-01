@@ -29,6 +29,7 @@ p, label, div {
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px;
+    color:red;
 }
 
 /* Subheaders */
