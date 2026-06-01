@@ -2,17 +2,36 @@
     background: linear-gradient(135deg, #141e30, #243b55);
 }
 
+/* Main title */
 h1 {
     text-align: center;
+    color: white !important;
+    font-size: 42px !important;
 }
 
+/* Normal text */
+p, label, div {
+    color: white !important;
+}
+
+/* Text area */
 .stTextArea textarea {
     font-size: 18px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
 }
 
+/* Button */
 .stButton button {
     width: 100%;
-    height: 50px;
+    height: 55px;
     font-size: 18px;
+    font-weight: bold;
     border-radius: 10px;
+}
+
+/* Subheaders */
+h2, h3 {
+    color: white !important;
 }
