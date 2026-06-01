@@ -1,5 +1,5 @@
-streamlit
-numpy
-pandas
 scikit-learn
-tensorflow==2.16.1
+streamlit==1.45.1
+tensorflow-cpu==2.16.1
+numpy==1.26.4
+pandas==2.2.2
