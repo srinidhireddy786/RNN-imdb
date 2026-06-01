@@ -1,8 +1,13 @@
-
 import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.datasets import imdb
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+st.set_page_config(
+    page_title="IMDb Sentiment Analysis",
+    page_icon="🎬",
+    layout="centered"
+)
 
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -12,12 +17,6 @@ model = tf.keras.models.load_model("imdb_rnn_model.keras")
 
 # IMDb word dictionary
 word_index = imdb.get_word_index()
-
-st.set_page_config(
-    page_title="IMDb Sentiment Analysis",
-    page_icon="🎬",
-    layout="centered"
-)
 
 st.title("🎬 IMDb Movie Review Sentiment Analysis")
 st.write("Enter a movie review and predict whether it is Positive or Negative.")
@@ -35,7 +34,7 @@ def encode_review(text):
         if word in word_index:
             encoded.append(word_index[word] + 3)
         else:
-            encoded.append(2)  # unknown word
+            encoded.append(2)
 
     return encoded
 
